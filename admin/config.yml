@@ -3,20 +3,17 @@ backend:
   branch: main
 
 media_folder: "assets/images/uploads"
-public_folder: "/masud-portfolio/assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
   - name: "portfolio"
     label: "Portfolio Website"
     files:
-
       - name: "content"
         label: "Website Content"
         file: "data/portfolio.json"
         format: "json"
-
         fields:
-
           - label: "Profile"
             name: "profile"
             widget: "object"
@@ -74,7 +71,6 @@ collections:
             widget: "object"
             fields:
               - { label: "Email", name: "email", widget: "string" }
-
               - label: "Social Links"
                 name: "socials"
                 widget: "object"
