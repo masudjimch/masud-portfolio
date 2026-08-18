@@ -1,1 +1,46 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio Editor</title><link rel="stylesheet" href="editor.css"></head><body><header><h1>Portfolio Editor</h1><button id="downloadBtn">Download portfolio.json</button></header><main><aside><a href="#profile">Profile</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><label>Import backup JSON<input id="importFile" type="file" accept=".json"></label></aside><section><div id="status">Loading current website data…</div><form id="editorForm"><div id="profile"><h2>Profile</h2><label>Name<input name="name"></label><label>Nickname<input name="nickname"></label><label>Title<input name="title"></label><label>Description<textarea name="shortDescription"></textarea></label><label>Image Path<input name="profileImage"></label></div><div id="about"><h2>About</h2><label>Title<input name="aboutTitle"></label><label>Description<textarea name="aboutDescription"></textarea></label></div><div id="skills"><h2>Skills</h2><button type="button" data-add="skill">+ Add</button><div id="skillsList"></div></div><div id="services"><h2>Services</h2><button type="button" data-add="service">+ Add</button><div id="servicesList"></div></div><div id="experience"><h2>Experience</h2><button type="button" data-add="experience">+ Add</button><div id="experienceList"></div></div><div id="projects"><h2>Projects</h2><button type="button" data-add="project">+ Add</button><div id="projectsList"></div></div><div id="contact"><h2>Contact</h2><label>Email<input name="email"></label><label>Facebook<input name="facebook"></label><label>LinkedIn<input name="linkedin"></label><label>GitHub<input name="github"></label></div><button type="button" id="downloadBtnBottom">Download portfolio.json</button></form></section></main><template id="skillTemplate"><div class="item"><label>Name<input data-field="name"></label><label>Level<input data-field="level" type="number"></label><button type="button" class="remove">Remove</button></div></template><template id="serviceTemplate"><div class="item"><label>Number<input data-field="number"></label><label>Icon<input data-field="icon"></label><label>Title<input data-field="title"></label><label>Description<textarea data-field="description"></textarea></label><button type="button" class="remove">Remove</button></div></template><template id="experienceTemplate"><div class="item"><label>Year<input data-field="year"></label><label>Title<input data-field="title"></label><label>Organization<input data-field="organization"></label><label>Description<textarea data-field="description"></textarea></label><button type="button" class="remove">Remove</button></div></template><template id="projectTemplate"><div class="item"><label>Title<input data-field="title"></label><label>Category<input data-field="category"></label><label>Description<textarea data-field="description"></textarea></label><label>Image<input data-field="image"></label><label>Link<input data-field="link"></label><button type="button" class="remove">Remove</button></div></template><script src="editor.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio Admin</title>
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+<header>
+  <div><small>PRIVATE ADMIN</small><h1>Portfolio Editor</h1></div>
+  <div class="actions">
+    <span id="loginStatus">Checking login…</span>
+    <button id="saveBtn" class="primary" disabled>Save to GitHub</button>
+    <button id="downloadBtn">Download backup</button>
+  </div>
+</header>
+<main>
+<aside>
+<a href="#profile">Profile</a><a href="#about">About</a><a href="#skills">Skills</a>
+<a href="#services">Services</a><a href="#experience">Experience</a>
+<a href="#projects">Projects</a><a href="#contact">Contact</a>
+</aside>
+<section>
+<div id="status">Loading current website data…</div>
+<form id="editorForm">
+<div class="card" id="profile"><h2>Profile</h2>
+<label>Name<input name="name"></label><label>Nickname<input name="nickname"></label>
+<label>Title<input name="title"></label><label>Short Description<textarea name="shortDescription"></textarea></label>
+<label>Image Path<input name="profileImage"></label></div>
+<div class="card" id="about"><h2>About</h2><label>Title<input name="aboutTitle"></label><label>Description<textarea name="aboutDescription"></textarea></label></div>
+<div class="card" id="skills"><h2>Skills <button type="button" data-add="skill">+ Add</button></h2><div id="skillsList"></div></div>
+<div class="card" id="services"><h2>Services <button type="button" data-add="service">+ Add</button></h2><div id="servicesList"></div></div>
+<div class="card" id="experience"><h2>Experience <button type="button" data-add="experience">+ Add</button></h2><div id="experienceList"></div></div>
+<div class="card" id="projects"><h2>Projects <button type="button" data-add="project">+ Add</button></h2><div id="projectsList"></div></div>
+<div class="card" id="contact"><h2>Contact</h2><label>Email<input name="email"></label><label>Facebook<input name="facebook"></label><label>LinkedIn<input name="linkedin"></label><label>GitHub<input name="github"></label></div>
+<div class="bottom"><button type="button" id="saveBtnBottom" class="primary" disabled>Save to GitHub</button></div>
+</form>
+</section>
+</main>
+<template id="skillTemplate"><div class="item"><label>Name<input data-field="name"></label><label>Level<input data-field="level" type="number"></label><button type="button" class="remove">Remove</button></div></template>
+<template id="serviceTemplate"><div class="item"><label>Number<input data-field="number"></label><label>Icon<input data-field="icon"></label><label>Title<input data-field="title"></label><label>Description<textarea data-field="description"></textarea></label><button type="button" class="remove">Remove</button></div></template>
+<template id="experienceTemplate"><div class="item"><label>Year<input data-field="year"></label><label>Title<input data-field="title"></label><label>Organization<input data-field="organization"></label><label>Description<textarea data-field="description"></textarea></label><button type="button" class="remove">Remove</button></div></template>
+<template id="projectTemplate"><div class="item"><label>Title<input data-field="title"></label><label>Category<input data-field="category"></label><label>Description<textarea data-field="description"></textarea></label><label>Image<input data-field="image"></label><label>Link<input data-field="link"></label><button type="button" class="remove">Remove</button></div></template>
+<script src="editor.js"></script>
+</body></html>
