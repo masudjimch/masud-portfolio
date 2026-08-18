@@ -1,0 +1,1 @@
+Replace this folder's placeholder with profile.jpg and project-1.jpg, project-2.jpg, project-3.jpg

@@ -1,0 +1,102 @@
+{
+  "profile": {
+    "name": "Md. Moshiur Rahman",
+    "nickname": "Masud",
+    "title": "Doctor | Medical Educator | Tech-freak Thinker",
+    "shortDescription": "A doctor, medical educator and technology enthusiast exploring the intersection of healthcare, knowledge and digital innovation.",
+    "image": "assets/images/profile.jpg"
+  },
+  "about": {
+    "title": "Where medicine, knowledge and technology meet curiosity.",
+    "description": "I am passionate about exploring the intersection of healthcare, education and technology. This section can later be edited from a CMS without changing website code."
+  },
+  "skills": [
+    {
+      "name": "Medical Education",
+      "level": 90
+    },
+    {
+      "name": "Healthcare",
+      "level": 90
+    },
+    {
+      "name": "Technology",
+      "level": 85
+    },
+    {
+      "name": "AI & Digital Tools",
+      "level": 80
+    }
+  ],
+  "services": [
+    {
+      "number": "01",
+      "icon": "🩺",
+      "title": "Medical Education",
+      "description": "Creating accessible, engaging and meaningful medical learning experiences."
+    },
+    {
+      "number": "02",
+      "icon": "💡",
+      "title": "Digital Innovation",
+      "description": "Exploring technology, AI and digital tools to solve meaningful problems."
+    },
+    {
+      "number": "03",
+      "icon": "📚",
+      "title": "Knowledge Sharing",
+      "description": "Transforming complex ideas into understandable and useful knowledge."
+    }
+  ],
+  "experience": [
+    {
+      "year": "Present",
+      "title": "Doctor & Medical Professional",
+      "organization": "Add your organization later",
+      "description": "Professional medical practice and continuous learning."
+    },
+    {
+      "year": "Future",
+      "title": "Medical Educator",
+      "organization": "Your Platform / Organization",
+      "description": "Developing innovative approaches to medical education."
+    },
+    {
+      "year": "Future",
+      "title": "Tech Explorer",
+      "organization": "Independent Projects",
+      "description": "Exploring AI, automation and emerging technologies."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Future Medical Project",
+      "category": "Medical / Technology",
+      "description": "Your featured project description will go here.",
+      "image": "assets/images/project-1.jpg",
+      "link": "#"
+    },
+    {
+      "title": "AI Learning Project",
+      "category": "AI / Education",
+      "description": "A future project exploring intelligent learning.",
+      "image": "assets/images/project-2.jpg",
+      "link": "#"
+    },
+    {
+      "title": "Digital Innovation",
+      "category": "Technology",
+      "description": "An upcoming digital project.",
+      "image": "assets/images/project-3.jpg",
+      "link": "#"
+    }
+  ],
+  "contact": {
+    "email": "your-email@example.com",
+    "socials": {
+      "Facebook": "#",
+      "LinkedIn": "#",
+      "GitHub": "#"
+    }
+  }
+}
