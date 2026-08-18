@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Editor</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PERSONAL WEBSITE</p>
+      <h1>Portfolio Editor</h1>
+    </div>
+    <button id="downloadBtn" class="primary">Download portfolio.json</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <p>EDITOR SECTIONS</p>
+      <a href="#profile">Profile</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <hr>
+      <label class="import-btn">
+        Import existing portfolio.json
+        <input id="importFile" type="file" accept=".json,application/json">
+      </label>
+      <p class="hint">Fill in the form, then download a new <code>portfolio.json</code>. No coding is required.</p>
+    </aside>
+
+    <section class="content">
+      <div class="notice">
+        <strong>How it works:</strong> edit the form → click Download → replace
+        <code>data/portfolio.json</code> in GitHub → Commit changes.
+      </div>
+
+      <form id="editorForm">
+        <section class="card" id="profile">
+          <h2>Profile</h2>
+          <div class="grid two">
+            <label>Full Name<input name="name" required></label>
+            <label>Nickname<input name="nickname"></label>
+          </div>
+          <label>Professional Title<input name="title"></label>
+          <label>Short Description<textarea name="shortDescription" rows="4"></textarea></label>
+          <label>Profile Image Path<input name="profileImage" placeholder="assets/images/profile.jpg"></label>
+        </section>
+
+        <section class="card" id="about">
+          <h2>About</h2>
+          <label>About Title<input name="aboutTitle"></label>
+          <label>About Description<textarea name="aboutDescription" rows="7"></textarea></label>
+        </section>
+
+        <section class="card" id="skills">
+          <div class="section-head"><h2>Skills</h2><button type="button" data-add="skill">+ Add Skill</button></div>
+          <div id="skillsList" class="repeat-list"></div>
+        </section>
+
+        <section class="card" id="experience">
+          <div class="section-head"><h2>Experience / Journey</h2><button type="button" data-add="experience">+ Add Experience</button></div>
+          <div id="experienceList" class="repeat-list"></div>
+        </section>
+
+        <section class="card" id="projects">
+          <div class="section-head"><h2>Projects</h2><button type="button" data-add="project">+ Add Project</button></div>
+          <div id="projectsList" class="repeat-list"></div>
+        </section>
+
+        <section class="card" id="contact">
+          <h2>Contact</h2>
+          <label>Email<input name="email" type="email"></label>
+          <div class="grid three">
+            <label>Facebook<input name="facebook"></label>
+            <label>LinkedIn<input name="linkedin"></label>
+            <label>GitHub<input name="github"></label>
+          </div>
+        </section>
+
+        <div class="bottom-actions">
+          <button type="button" id="loadSample">Load Current Sample</button>
+          <button type="button" id="downloadBtnBottom" class="primary">Download portfolio.json</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <template id="skillTemplate">
+    <div class="repeat-item">
+      <div class="grid two">
+        <label>Skill Name<input data-field="name"></label>
+        <label>Level (0–100)<input data-field="level" type="number" min="0" max="100"></label>
+      </div>
+      <button type="button" class="remove">Remove</button>
+    </div>
+  </template>
+
+  <template id="experienceTemplate">
+    <div class="repeat-item">
+      <div class="grid three">
+        <label>Year<input data-field="year"></label>
+        <label>Title<input data-field="title"></label>
+        <label>Organization<input data-field="organization"></label>
+      </div>
+      <label>Description<textarea data-field="description" rows="3"></textarea></label>
+      <button type="button" class="remove">Remove</button>
+    </div>
+  </template>
+
+  <template id="projectTemplate">
+    <div class="repeat-item">
+      <div class="grid two">
+        <label>Project Title<input data-field="title"></label>
+        <label>Category<input data-field="category"></label>
+      </div>
+      <label>Description<textarea data-field="description" rows="3"></textarea></label>
+      <div class="grid two">
+        <label>Image Path<input data-field="image"></label>
+        <label>Project Link<input data-field="link"></label>
+      </div>
+      <button type="button" class="remove">Remove</button>
+    </div>
+  </template>
+
+  <script src="editor.js"></script>
+</body>
+</html>
