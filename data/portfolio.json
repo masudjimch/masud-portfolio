@@ -13,19 +13,19 @@
   "skills": [
     {
       "name": "Medical Education",
-      "level": 90
+      "level": 95
     },
     {
       "name": "Healthcare",
-      "level": 90
+      "level": 95
     },
     {
       "name": "Technology",
-      "level": 80
+      "level": 75
     },
     {
       "name": "AI & Digital Tools",
-      "level": 80
+      "level": 75
     }
   ],
   "services": [],
