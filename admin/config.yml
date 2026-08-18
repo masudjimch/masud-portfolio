@@ -1,1 +1,84 @@
-# Decap CMS configuration will be added after GitHub Pages deployment.
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/masud-portfolio/assets/images/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Website"
+    files:
+
+      - name: "content"
+        label: "Website Content"
+        file: "data/portfolio.json"
+        format: "json"
+
+        fields:
+
+          - label: "Profile"
+            name: "profile"
+            widget: "object"
+            fields:
+              - { label: "Full Name", name: "name", widget: "string" }
+              - { label: "Nickname", name: "nickname", widget: "string" }
+              - { label: "Professional Title", name: "title", widget: "string" }
+              - { label: "Short Description", name: "shortDescription", widget: "text" }
+              - { label: "Profile Image", name: "image", widget: "image", required: false }
+
+          - label: "About Me"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "About Title", name: "title", widget: "string" }
+              - { label: "About Description", name: "description", widget: "text" }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Skill Name", name: "name", widget: "string" }
+              - { label: "Level", name: "level", widget: "number", min: 0, max: 100 }
+
+          - label: "Services / Expertise"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Experience / Journey"
+            name: "experience"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Organization", name: "organization", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Project Image", name: "image", widget: "image", required: false }
+              - { label: "Project Link", name: "link", widget: "string", required: false }
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+
+              - label: "Social Links"
+                name: "socials"
+                widget: "object"
+                fields:
+                  - { label: "Facebook", name: "Facebook", widget: "string", required: false }
+                  - { label: "LinkedIn", name: "LinkedIn", widget: "string", required: false }
+                  - { label: "GitHub", name: "GitHub", widget: "string", required: false }
