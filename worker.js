@@ -17,11 +17,11 @@ export default {async fetch(request,env){
 
  if(url.pathname==="/login"){
    const a=new URL("https://github.com/login/oauth/authorize");
-   a.searchParams.set("client_id",env.GITHUB_CLIENT_ID);
+   a.searchParams.set("client_id","Ov23limS9o9BJMPqr4iB");
    a.searchParams.set("redirect_uri",CALLBACK_URL);
    a.searchParams.set("scope","repo read:user");
    return Response.redirect(a.toString(),302);
- }
+}
 
  if(url.pathname==="/callback"){
    const code=url.searchParams.get("code");
